@@ -11,96 +11,91 @@
 
 <style>
 :root {
-    /* ĐỔI MÀU SẮC WEBSITE TẠI ĐÂY */
-    --brown: #6b4423; /* Màu chủ đạo chính */
-    --blue: #4a7c59;  /* Màu nhấn xanh */
-    --pink: #d9777f;  /* Màu nhấn hồng */
-    --cream: #f4ece1; /* Màu nền phụ */
-    --bg: #faf7f2;    /* Màu nền web */
-    --dark: #2b2118;  /* Màu chữ */
-    --muted: #6e5d4f; /* Màu chữ phụ */
-    --line: #e6dad0;  /* Đường viền */
+    --brown: #6b4423;
+    --pink: #d9777f;
+    --cream: #f7ede2;
+    --bg: #faf6f0;
+    --dark: #2b2118;
+    --muted: #6e5d4f;
+    --line: #e8ded5;
     --white: #ffffff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 82px; }
-body { font-family: "Be Vietnam Pro", sans-serif; background: var(--bg); color: var(--dark); line-height: 1.7; }
-img { max-width: 100%; display: block; border-radius: 12px; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { font-family: "Be Vietnam Pro", sans-serif; background: var(--bg); color: var(--dark); line-height: 1.6; }
+img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 .container { width: min(1140px, 92%); margin: auto; }
 
-header { position: fixed; z-index: 100; top: 0; width: 100%; height: 80px; background: rgba(255, 253, 250, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(107, 68, 35, 0.1); }
-.nav { height: 80px; display: flex; align-items: center; justify-content: space-between; }
-.brand-title { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 800; color: var(--brown); }
-nav ul { display: flex; gap: 30px; list-style: none; }
-nav a { font-size: 14px; font-weight: 700; }
+/* HEADER & NAVBAR */
+header { position: fixed; z-index: 100; top: 0; width: 100%; height: 85px; background: rgba(255, 253, 250, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav { height: 85px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand img { height: 60px; object-fit: contain; }
+nav ul { display: flex; gap: 28px; list-style: none; }
+nav a { font-size: 15px; font-weight: 700; color: var(--brown); transition: .2s; }
 nav a:hover { color: var(--pink); }
-.menu { display: none; border: 0; background: none; font-size: 28px; color: var(--brown); }
 
-.hero { min-height: 90vh; padding: 120px 0 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-.badge { display: inline-block; background: #f3e5e8; color: var(--pink); padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
-h1, h2, h3 { font-family: "Playfair Display", serif; color: var(--brown); line-height: 1.2; }
-h1 { font-size: clamp(38px, 5vw, 60px); }
+/* HERO SECTION */
+.hero { min-height: 85vh; padding: 120px 0 60px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+.badge { display: inline-block; background: #fce8ea; color: var(--pink); padding: 6px 18px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
+h1 { font-family: "Playfair Display", serif; font-size: clamp(36px, 4.5vw, 56px); color: var(--brown); line-height: 1.2; }
 h1 span { color: var(--pink); }
-.hero h2 { font-size: 22px; margin: 15px 0 10px; }
-.hero p { color: var(--muted); max-width: 500px; margin-bottom: 25px; }
-.actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn { border: 0; border-radius: 50px; padding: 12px 26px; font-size: 14px; font-weight: 700; display: inline-flex; justify-content: center; align-items: center; transition: .2s; }
-.btn:hover { transform: translateY(-3px); }
+.hero p { color: var(--muted); font-size: 16px; margin: 18px 0 28px; max-width: 500px; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn { border: 0; border-radius: 50px; padding: 12px 28px; font-size: 14px; font-weight: 700; transition: .25s; display: inline-flex; align-items: center; justify-content: center; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 .primary { background: var(--brown); color: #fff; }
+.pink-btn { background: var(--pink); color: #fff; }
 .soft { background: var(--cream); color: var(--brown); }
-.pink { background: var(--pink); color: #fff; }
-.hero-img { background: #fff; border-radius: 24px; padding: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.06); text-align: center; }
-.hero-img img { width: 100%; height: 380px; object-fit: cover; }
 
+.hero-img-box { background: #fff; padding: 20px; border-radius: 28px; box-shadow: 0 15px 35px rgba(107,68,35,0.08); text-align: center; }
+.hero-img-box img { width: 100%; max-height: 380px; object-fit: contain; border-radius: 16px; }
+
+/* SECTIONS */
 section { padding: 80px 0; }
-.white { background: #fff; }
-.heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
-.heading small { color: var(--pink); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-.heading h2 { font-size: clamp(30px, 4vw, 42px); margin: 8px 0 10px; }
-.heading p { color: var(--muted); font-size: 14px; }
-.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-.card { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; transition: .25s; padding: 15px; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.08); }
-.pic { height: 260px; overflow: hidden; }
-.pic img { width: 100%; height: 100%; object-fit: cover; }
-.card-body { padding: 15px 5px 5px; }
-.top { display: flex; justify-content: space-between; align-items: center; }
-.card h3 { font-size: 20px; }
-.price { color: var(--pink); font-size: 17px; font-weight: 800; margin: 6px 0; }
+.white-bg { background: #fff; }
+.heading { text-align: center; max-width: 650px; margin: 0 auto 45px; }
+.heading small { color: var(--pink); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
+.heading h2 { font-family: "Playfair Display", serif; font-size: clamp(28px, 3.5vw, 40px); color: var(--brown); margin: 6px 0 10px; }
+.heading p { color: var(--muted); font-size: 15px; }
+
+/* PRODUCT GRID */
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; transition: .3s; padding: 15px; display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.07); }
+.pic { height: 240px; background: #fff; border-radius: 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 10px; }
+.pic img { max-height: 100%; width: auto; object-fit: contain; }
+.card-body { padding: 15px 5px 5px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.card h3 { font-size: 18px; color: var(--brown); margin-bottom: 4px; }
+.price { color: var(--pink); font-size: 18px; font-weight: 800; margin-bottom: 10px; }
 .card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
-.card .btn { width: 100%; }
 
-.about { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.about img { width: 100%; height: 400px; object-fit: cover; border-radius: 24px; }
-.about h2 { font-size: 38px; margin: 8px 0 15px; }
-.about p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
-.checks { list-style: none; margin-top: 15px; }
-.checks li { margin: 8px 0; font-size: 14px; font-weight: 700; }
-
-.order { background: var(--cream); }
-.formbox { max-width: 700px; margin: auto; background: #fff; padding: 35px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+/* ORDER FORM */
+.order-sec { background: var(--cream); }
+.formbox { max-width: 650px; margin: auto; background: #fff; padding: 35px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 form { display: grid; gap: 16px; }
 .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .group { display: grid; gap: 6px; }
-.group label { font-size: 13px; font-weight: 700; }
-input, select, textarea { border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 12px 14px; outline: none; color: var(--dark); }
-input:focus, select:focus, textarea:focus { border-color: var(--pink); }
-textarea { min-height: 100px; resize: vertical; }
-.message { display: none; padding: 12px; border-radius: 10px; background: #e6f4ea; color: #1e7e34; font-size: 14px; font-weight: 700; text-align: center; }
+.group label { font-size: 13px; font-weight: 700; color: var(--brown); }
+input, select, textarea { border: 1px solid var(--line); background: var(--bg); border-radius: 12px; padding: 12px 15px; outline: none; }
+input:focus, select:focus, textarea:focus { border-color: var(--pink); background: #fff; }
+textarea { min-height: 90px; resize: vertical; }
+.message { display: none; padding: 14px; border-radius: 12px; background: #e8f5e9; color: #2e7d32; font-size: 14px; font-weight: 700; text-align: center; }
 
-footer { background: var(--dark); color: #fff; padding: 40px 0 20px; }
-.foot { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 30px; }
-.foot h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
-.foot h4 { color: var(--cream); margin-bottom: 10px; }
-.foot p, .foot a { font-size: 13px; color: #d0c4b8; display: block; margin: 6px 0; }
-.copy { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 15px; text-align: center; color: #a09080; font-size: 12px; }
+/* FOOTER */
+footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
+.foot { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 35px; }
+.foot h3 { color: #fff; font-size: 20px; margin-bottom: 12px; }
+.foot h4 { color: var(--cream); margin-bottom: 12px; font-size: 16px; }
+.foot p, .foot a { font-size: 14px; color: #d0c4b8; display: block; margin: 8px 0; }
+.copy { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; color: #a09080; font-size: 13px; }
 
 @media(max-width: 768px) {
-    .hero, .about, .foot { grid-template-columns: 1fr; }
+    .hero, .foot { grid-template-columns: 1fr; }
     .row { grid-template-columns: 1fr; }
     nav ul { display: none; }
 }
@@ -110,12 +105,14 @@ footer { background: var(--dark); color: #fff; padding: 40px 0 20px; }
 
 <header>
   <div class="container nav">
-    <a class="brand-title" href="#trang-chu">🧶 Nón Len Đa Dạng</a>
+    <a class="brand" href="#trang-chu">
+      <!-- LOGO CHÍNH THỨC -->
+      <img src="https://daothianhbpdx2-spec.github.io/mulen/logo.png" alt="Nón Len Đa Dạng" onerror="this.src='https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=100'">
+    </a>
     <nav>
       <ul>
         <li><a href="#trang-chu">Trang chủ</a></li>
-        <li><a href="#dich-vu">Sản phẩm</a></li>
-        <li><a href="#ve-chung-toi">Về chúng tôi</a></li>
+        <li><a href="#san-pham">Mẫu Nón Len</a></li>
         <li><a href="#dat-hang">Đặt hàng</a></li>
       </ul>
     </nav>
@@ -123,87 +120,173 @@ footer { background: var(--dark); color: #fff; padding: 40px 0 20px; }
 </header>
 
 <main>
+<!-- HERO -->
 <section class="container hero" id="trang-chu">
   <div>
-    <span class="badge">🧶 Nón Len Ấm Áp • Phong Cách</span>
+    <span class="badge">🧶 Nón Len Đa Dạng • Chất Lượng</span>
     <h1>Đội nón,<br><span>bật chất riêng.</span></h1>
-    <h2>Nón Len Đa Dạng</h2>
-    <p>Nhiều màu sắc, phong cách trẻ trung, dễ phối đồ. Chọn ngay mẫu nón len phù hợp nhất với bạn!</p>
+    <p>Nhiều màu sắc, chất liệu len mềm mịn ấm áp, dễ dàng phối đồ theo phong cách cá tính của bạn!</p>
     <div class="actions">
       <a class="btn primary" href="#dat-hang">🛒 Đặt ngay</a>
-      <a class="btn soft" href="#dich-vu">Xem bộ sưu tập</a>
+      <a class="btn soft" href="#san-pham">Xem tất cả mẫu</a>
     </div>
   </div>
-  <div class="hero-img">
-    <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&auto=format&fit=crop" alt="Nón len xinh">
+  <div class="hero-img-box">
+    <!-- NÓN TRẮNG KEM TRÊN NỀN CAM -->
+    <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&auto=format&fit=crop" alt="Nón len kem ấm áp">
   </div>
 </section>
 
-<section class="white" id="dich-vu">
+<!-- SAN PHAM -->
+<section class="white-bg" id="san-pham">
   <div class="container">
     <div class="heading">
-      <small>Bộ sưu tập</small>
-      <h2>Mẫu Nón Len Hot Nhất</h2>
-      <p>Chất liệu len mềm mịn, giữ ấm tốt và phù hợp cho mọi outfit.</p>
+      <small>Bộ sưu tập mới nhất</small>
+      <h2>Bộ Sưu Tập Nón Len Hot Trend</h2>
+      <p>Lựa chọn màu sắc yêu thích để tạo nên phong cách độc đáo của riêng bạn.</p>
     </div>
+
     <div class="products">
+      <!-- 1. NÓN TRẮNG KEM -->
       <article class="card">
-        <div class="pic"><img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400&auto=format&fit=crop" alt="Kem sữa"></div>
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400&auto=format&fit=crop" alt="Nón Len Trắng Kem">
+        </div>
         <div class="card-body">
-          <h3>Nón Len Kem Sữa</h3>
-          <div class="price">69.000đ</div>
-          <p>Nhẹ nhàng, tinh tế, cực kỳ dễ phối đồ.</p>
-          <button class="btn primary choose" data-value="Nón Len Kem Sữa">Chọn mua</button>
+          <div>
+            <h3>Nón Len Trắng Kem</h3>
+            <div class="price">69.000đ</div>
+            <p>Kiểu dáng Beanie basic thanh lịch, dễ phối mọi loại trang phục.</p>
+          </div>
+          <button class="btn primary choose" data-value="Nón Len Trắng Kem">Chọn mua</button>
         </div>
       </article>
 
+      <!-- 2. NÓN ĐEN AQER -->
       <article class="card">
-        <div class="pic"><img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&auto=format&fit=crop" alt="Hồng đào"></div>
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop" alt="Nón Len Đen AQER">
+        </div>
         <div class="card-body">
-          <h3>Nón Len Hồng Đào</h3>
-          <div class="price">69.000đ</div>
-          <p>Ngọt ngào, nữ tính, nổi bật outfit của bạn.</p>
-          <button class="btn pink choose" data-value="Nón Len Hồng Đào">Chọn mua</button>
+          <div>
+            <h3>Nón Len Đen AQER</h3>
+            <div class="price">79.000đ</div>
+            <p>Phong cách Streetwear cá tính với nhãn AQER độc đáo.</p>
+          </div>
+          <button class="btn primary choose" data-value="Nón Len Đen AQER">Chọn mua</button>
         </div>
       </article>
 
+      <!-- 3. NÓN HỒNG DÂU -->
       <article class="card">
-        <div class="pic"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop" alt="Nâu Mocha"></div>
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&auto=format&fit=crop" alt="Nón Len Hồng Dâu">
+        </div>
         <div class="card-body">
-          <h3>Nón Len Nâu Mocha</h3>
-          <div class="price">79.000đ</div>
-          <p>Ấm áp, phong cách Vintage cổ điển.</p>
-          <button class="btn primary choose" data-value="Nón Len Nâu Mocha">Chọn mua</button>
+          <div>
+            <h3>Nón Len Hồng Dâu</h3>
+            <div class="price">69.000đ</div>
+            <p>Màu hồng dịu dàng, chất len gân nổi cực xinh xắn.</p>
+          </div>
+          <button class="btn pink-btn choose" data-value="Nón Len Hồng Dâu">Chọn mua</button>
+        </div>
+      </article>
+
+      <!-- 4. NÓN XÁM CỔ ĐIỂN JEANS -->
+      <article class="card">
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&auto=format&fit=crop" alt="Nón Len Xám JEANS">
+        </div>
+        <div class="card-body">
+          <div>
+            <h3>Nón Len Xám JEANS</h3>
+            <div class="price">79.000đ</div>
+            <p>Tông xám tiêu đặn len đốm cá tính, nam nữ đều đội đẹp.</p>
+          </div>
+          <button class="btn primary choose" data-value="Nón Len Xám JEANS">Chọn mua</button>
+        </div>
+      </article>
+
+      <!-- 5. NÓN LOANG MÀU OM BRE -->
+      <article class="card">
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400&auto=format&fit=crop" alt="Nón Len Loang Nâu Kem">
+        </div>
+        <div class="card-body">
+          <div>
+            <h3>Nón Len Loang Nâu Kem</h3>
+            <div class="price">89.000đ</div>
+            <p>Len xù cao cấp phối màu Ombre cực kỳ ấm áp và thời trang.</p>
+          </div>
+          <button class="btn primary choose" data-value="Nón Len Loang Nâu Kem">Chọn mua</button>
+        </div>
+      </article>
+
+      <!-- 6. NÓN HỒNG ĐẤT PASTELL -->
+      <article class="card">
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&auto=format&fit=crop" alt="Nón Len Hồng Đất">
+        </div>
+        <div class="card-body">
+          <div>
+            <h3>Nón Len Hồng Đất</h3>
+            <div class="price">69.000đ</div>
+            <p>Màu hồng đất Hàn Quốc nhẹ nhàng, tôn dáng khuôn mặt.</p>
+          </div>
+          <button class="btn pink-btn choose" data-value="Nón Len Hồng Đất">Chọn mua</button>
+        </div>
+      </article>
+
+      <!-- 7. NÓN ĐỎ RƯỢU VANG -->
+      <article class="card">
+        <div class="pic">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop" alt="Nón Len Đỏ Rượu Vang">
+        </div>
+        <div class="card-body">
+          <div>
+            <h3>Nón Len Đỏ Rượu Vang</h3>
+            <div class="price">79.000đ</div>
+            <p>Màu đỏ rượu vang quyến rũ, nổi bật giữa đám đông.</p>
+          </div>
+          <button class="btn primary choose" data-value="Nón Len Đỏ Rượu Vang">Chọn mua</button>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="order" id="dat-hang">
+<!-- FORM DAT HANG -->
+<section class="order-sec" id="dat-hang">
   <div class="container">
     <div class="heading">
-      <small>Đặt hàng nhanh</small>
-      <h2>Điền thông tin nhận hàng</h2>
+      <small>Đặt hàng online</small>
+      <h2>Điền Thông Tin Nhận Hàng</h2>
     </div>
     <div class="formbox">
-      <form id="form">
+      <form id="orderForm">
         <div class="row">
-          <div class="group"><label>Họ tên *</label><input id="name" required placeholder="Nguyễn Văn A"></div>
-          <div class="group"><label>SĐT nhận hàng *</label><input id="phone" type="tel" required placeholder="0987 569 999"></div>
+          <div class="group"><label>Họ tên khách hàng *</label><input type="text" id="fullname" required placeholder="Nguyễn Văn A"></div>
+          <div class="group"><label>Số điện thoại *</label><input type="tel" id="phone" required placeholder="0987 569 999"></div>
         </div>
         <div class="group">
-          <label>Chọn loại nón *</label>
-          <select id="package" required>
-            <option value="">-- Chọn sản phẩm --</option>
-            <option>Nón Len Kem Sữa</option>
-            <option>Nón Len Hồng Đào</option>
-            <option>Nón Len Nâu Mocha</option>
+          <label>Chọn mẫu nón *</label>
+          <select id="hatSelect" required>
+            <option value="">-- Bấm để chọn mẫu nón --</option>
+            <option>Nón Len Trắng Kem (69.000đ)</option>
+            <option>Nón Len Đen AQER (79.000đ)</option>
+            <option>Nón Len Hồng Dâu (69.000đ)</option>
+            <option>Nón Len Xám JEANS (79.000đ)</option>
+            <option>Nón Len Loang Nâu Kem (89.000đ)</option>
+            <option>Nón Len Hồng Đất (69.000đ)</option>
+            <option>Nón Len Đỏ Rượu Vang (79.000đ)</option>
           </select>
         </div>
-        <div class="group"><label>Địa chỉ nhận hàng / Ghi chú</label><textarea id="note" placeholder="Nhập địa chỉ nhà và số lượng nón..."></textarea></div>
-        <button class="btn primary" type="submit" id="send">🧶 Gửi Đơn Đặt Hàng</button>
-        <div class="message" id="msg"></div>
+        <div class="group">
+          <label>Địa chỉ giao hàng & Ghi chú</label>
+          <textarea id="address" placeholder="Nhập địa chỉ nhận hàng chi tiết (Số nhà, đường, xã/phường, tỉnh/thành)..."></textarea>
+        </div>
+        <button type="submit" class="btn primary">🧶 ĐẶT HÀNG NGAY</button>
+        <div class="message" id="successMsg">🎉 Đặt hàng thành công! Shop sẽ liên hệ xác nhận đơn hàng qua SĐT của bạn ngay.</div>
       </form>
     </div>
   </div>
@@ -214,39 +297,45 @@ footer { background: var(--dark); color: #fff; padding: 40px 0 20px; }
   <div class="container foot">
     <div>
       <h3>Nón Len Đa Dạng</h3>
-      <p>Chuyên nón len chất lượng, thời trang và ấm áp.</p>
+      <p>Chuyên cung cấp các mẫu nón len thời trang, đa dạng sắc màu với chất lượng hàng đầu.</p>
     </div>
     <div>
-      <h4>Liên hệ đặt hàng</h4>
-      <!-- ĐỔI SỐ ĐIỆN THOẠI CỦA BẠN TẠI ĐÂY -->
+      <h4>Tư vấn & Đặt hàng</h4>
       <a href="tel:0987569999">📞 Hotline: 0987 569 999</a>
-      <a href="https://zalo.me/0987569999" target="_blank">💬 Zalo: 0987 569 999</a>
+      <a href="https://zalo.me/0987569999" target="_blank">💬 Zalo hỗ trợ: 0987 569 999</a>
     </div>
     <div>
-      <h4>Địa chỉ shop</h4>
-      <!-- ĐỔI ĐỊA CHỈ CỦA BẠN TẠI ĐÂY -->
+      <h4>Thông tin Shop</h4>
       <p>📍 Địa chỉ: Bình Dương, Việt Nam</p>
-      <p>🚚 Ship COD toàn quốc</p>
+      <p>🚚 Giao hàng COD tận nơi toàn quốc</p>
     </div>
   </div>
-  <div class="container copy">© 2026 Nón Len Đa Dạng • All rights reserved.</div>
+  <div class="container copy">© 2026 Nón Len Đa Dạng. Đội nón, bật chất riêng!</div>
 </footer>
 
 <script>
-document.querySelectorAll(".choose").forEach(b => {
-    b.onclick = () => {
-        document.getElementById("package").value = b.dataset.value;
-        document.getElementById("dat-hang").scrollIntoView({ behavior: "smooth" });
-    };
+// Tự động chọn mẫu nón khi bấm nút "Chọn mua"
+document.querySelectorAll(".choose").forEach(btn => {
+  btn.onclick = () => {
+    const val = btn.dataset.value;
+    const select = document.getElementById("hatSelect");
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].text.includes(val)) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+    document.getElementById("dat-hang").scrollIntoView({ behavior: "smooth" });
+  };
 });
 
-document.getElementById("form").addEventListener("submit", e => {
-    e.preventDefault();
-    const msg = document.getElementById("msg");
-    msg.textContent = "🎉 Cảm ơn bạn! Đơn hàng đã gửi thành công. Shop sẽ gọi lại xác nhận ngay!";
-    msg.style.display = "block";
-    e.target.reset();
-});
+// Xử lý gửi đơn hàng
+document.getElementById("orderForm").onsubmit = (e) => {
+  e.preventDefault();
+  const msg = document.getElementById("successMsg");
+  msg.style.display = "block";
+  e.target.reset();
+};
 </script>
 
 </body>
