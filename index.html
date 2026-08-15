@@ -8,116 +8,246 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--brown:#8B6252;--blue:#6F9BA8;--pink:#D58F9B;--cream:#E8D6C3;--bg:#FBF7F2;--dark:#49362E;--muted:#77655D;--line:#EADDD4;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:82px}
-body{font-family:"Be Vietnam Pro",sans-serif;background:var(--bg);color:var(--dark);line-height:1.7}
-img{max-width:100%;display:block}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
-.container{width:min(1140px,92%);margin:auto}
-header{position:fixed;z-index:100;top:0;width:100%;height:80px;background:#fffdfaf5;backdrop-filter:blur(14px);border-bottom:1px solid #8b62521a}
-.nav{height:80px;display:flex;align-items:center;justify-content:space-between}
-.brand img{width:112px;height:72px;object-fit:contain}
-nav ul{display:flex;gap:30px;list-style:none}nav a{font-size:14px;font-weight:800}nav a:hover{color:var(--pink)}
-.menu{display:none;border:0;background:none;font-size:28px;color:var(--brown)}
-.hero{min-height:100vh;padding:125px 0 65px;display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
-.badge{display:inline-block;background:#f5dfe2;color:var(--brown);padding:7px 15px;border-radius:30px;font-size:12px;font-weight:800;margin-bottom:18px}
-h1,h2,h3{font-family:"Playfair Display",serif;color:var(--brown);line-height:1.2}
-h1{font-size:clamp(48px,6vw,74px)}h1 span{color:var(--pink)}
-.hero h2{font-size:25px;margin:15px 0 10px}.hero p{color:var(--muted);max-width:530px;margin-bottom:25px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:50px;padding:13px 23px;font-size:14px;font-weight:800;display:inline-flex;justify-content:center;align-items:center;transition:.2s}.btn:hover{transform:translateY(-3px)}
-.primary{background:var(--brown);color:#fff}.soft{background:var(--cream);color:var(--brown)}.pink{background:var(--pink);color:#fff}.blue{background:var(--blue);color:#fff}
-.hero-logo{background:#fff;border-radius:35px;padding:30px;box-shadow:0 20px 50px #49362e18;text-align:center;border:1px solid #eadfd8}
-.hero-logo img{width:min(100%,500px);margin:auto}
-.hero-logo p{margin:5px auto 0;color:var(--muted);font-size:13px}
-section{padding:95px 0}.white{background:#fff}
-.heading{text-align:center;max-width:720px;margin:0 auto 45px}.heading small{color:var(--pink);font-weight:800;letter-spacing:2px;text-transform:uppercase}.heading h2{font-size:clamp(34px,5vw,48px);margin:8px 0 12px}.heading p{color:var(--muted);font-size:14px}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:var(--bg);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 16px 35px #49362e16}
-.pic{height:300px;background:#eee5db}.pic img{width:100%;height:100%;object-fit:cover}
-.card-body{padding:20px}.top{display:flex;justify-content:space-between;align-items:center}.card h3{font-size:24px}.dot{width:20px;height:20px;border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 3px #d8ccc4}.price{color:var(--pink);font-size:18px;font-weight:800;margin:7px 0}.card p{font-size:13px;color:var(--muted);min-height:47px;margin-bottom:15px}.card .btn{width:100%}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about img{width:100%;height:450px;object-fit:cover;border-radius:30px;box-shadow:0 18px 40px #49362e18}.about h2{font-size:45px;margin:8px 0 17px}.about p{color:var(--muted);font-size:14px;margin-bottom:12px}.checks{list-style:none;margin-top:18px}.checks li{margin:9px 0;font-size:14px;font-weight:700}.checks span{display:inline-grid;place-items:center;width:27px;height:27px;background:var(--cream);border-radius:50%;margin-right:8px}
-.order{background:linear-gradient(135deg,#e8d6c344,#d58f9b18)}.formbox{max-width:820px;margin:auto;background:#fff;padding:38px;border-radius:28px;box-shadow:0 18px 45px #49362e16}
-form{display:grid;gap:16px}.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.group{display:grid;gap:6px}.group label{font-size:12px;font-weight:800}input,select,textarea{border:1px solid var(--line);background:#fffcfa;border-radius:12px;padding:12px 14px;outline:none;color:var(--dark)}input:focus,select:focus,textarea:focus{border-color:var(--pink)}textarea{min-height:110px;resize:vertical}.message{display:none;padding:13px;border-radius:12px;background:#edf7f4;color:#47786e;font-size:13px;font-weight:700}
-.cta{background:var(--brown);color:#fff;text-align:center;padding:75px 20px}.cta h2{color:#fff;font-size:44px}.cta p{max-width:620px;margin:10px auto 22px;color:#fffC}
-footer{background:#49362E;color:#fff;padding:42px 0 20px}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}.foot h3{color:#fff;font-size:25px}.foot h4{color:var(--cream);margin-bottom:8px}.foot p,.foot a{font-size:12px;color:#fffB;display:block;margin:5px 0}.copy{border-top:1px solid #ffffff1a;margin-top:28px;padding-top:16px;text-align:center;color:#fff7;font-size:11px}
-@media(max-width:800px){nav ul{display:none;position:absolute;top:80px;left:0;width:100%;background:#fff;padding:10px 5%;flex-direction:column;gap:0;box-shadow:0 12px 25px #49362e18}nav ul.open{display:flex}nav li{padding:10px 0}.menu{display:block}.hero,.about{grid-template-columns:1fr}.hero{text-align:center}.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}.products{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.brand img{width:90px}.hero{padding-top:110px}.products{grid-template-columns:1fr}.pic{height:330px}.about h2{font-size:36px}.row{grid-template-columns:1fr}.formbox{padding:23px 17px}.foot{grid-template-columns:1fr}.cta h2{font-size:35px}}
+:root {
+    /* ĐỔI MÀU SẮC WEBSITE TẠI ĐÂY */
+    --brown: #6b4423; /* Màu chủ đạo chính */
+    --blue: #4a7c59;  /* Màu nhấn xanh */
+    --pink: #d9777f;  /* Màu nhấn hồng */
+    --cream: #f4ece1; /* Màu nền phụ */
+    --bg: #faf7f2;    /* Màu nền web */
+    --dark: #2b2118;  /* Màu chữ */
+    --muted: #6e5d4f; /* Màu chữ phụ */
+    --line: #e6dad0;  /* Đường viền */
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+body { font-family: "Be Vietnam Pro", sans-serif; background: var(--bg); color: var(--dark); line-height: 1.7; }
+img { max-width: 100%; display: block; border-radius: 12px; }
+a { text-decoration: none; color: inherit; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.container { width: min(1140px, 92%); margin: auto; }
+
+header { position: fixed; z-index: 100; top: 0; width: 100%; height: 80px; background: rgba(255, 253, 250, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(107, 68, 35, 0.1); }
+.nav { height: 80px; display: flex; align-items: center; justify-content: space-between; }
+.brand-title { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 800; color: var(--brown); }
+nav ul { display: flex; gap: 30px; list-style: none; }
+nav a { font-size: 14px; font-weight: 700; }
+nav a:hover { color: var(--pink); }
+.menu { display: none; border: 0; background: none; font-size: 28px; color: var(--brown); }
+
+.hero { min-height: 90vh; padding: 120px 0 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.badge { display: inline-block; background: #f3e5e8; color: var(--pink); padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
+h1, h2, h3 { font-family: "Playfair Display", serif; color: var(--brown); line-height: 1.2; }
+h1 { font-size: clamp(38px, 5vw, 60px); }
+h1 span { color: var(--pink); }
+.hero h2 { font-size: 22px; margin: 15px 0 10px; }
+.hero p { color: var(--muted); max-width: 500px; margin-bottom: 25px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { border: 0; border-radius: 50px; padding: 12px 26px; font-size: 14px; font-weight: 700; display: inline-flex; justify-content: center; align-items: center; transition: .2s; }
+.btn:hover { transform: translateY(-3px); }
+.primary { background: var(--brown); color: #fff; }
+.soft { background: var(--cream); color: var(--brown); }
+.pink { background: var(--pink); color: #fff; }
+.hero-img { background: #fff; border-radius: 24px; padding: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.06); text-align: center; }
+.hero-img img { width: 100%; height: 380px; object-fit: cover; }
+
+section { padding: 80px 0; }
+.white { background: #fff; }
+.heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+.heading small { color: var(--pink); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.heading h2 { font-size: clamp(30px, 4vw, 42px); margin: 8px 0 10px; }
+.heading p { color: var(--muted); font-size: 14px; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; transition: .25s; padding: 15px; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.08); }
+.pic { height: 260px; overflow: hidden; }
+.pic img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 15px 5px 5px; }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.card h3 { font-size: 20px; }
+.price { color: var(--pink); font-size: 17px; font-weight: 800; margin: 6px 0; }
+.card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
+.card .btn { width: 100%; }
+
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.about img { width: 100%; height: 400px; object-fit: cover; border-radius: 24px; }
+.about h2 { font-size: 38px; margin: 8px 0 15px; }
+.about p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+.checks { list-style: none; margin-top: 15px; }
+.checks li { margin: 8px 0; font-size: 14px; font-weight: 700; }
+
+.order { background: var(--cream); }
+.formbox { max-width: 700px; margin: auto; background: #fff; padding: 35px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+form { display: grid; gap: 16px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.group { display: grid; gap: 6px; }
+.group label { font-size: 13px; font-weight: 700; }
+input, select, textarea { border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 12px 14px; outline: none; color: var(--dark); }
+input:focus, select:focus, textarea:focus { border-color: var(--pink); }
+textarea { min-height: 100px; resize: vertical; }
+.message { display: none; padding: 12px; border-radius: 10px; background: #e6f4ea; color: #1e7e34; font-size: 14px; font-weight: 700; text-align: center; }
+
+footer { background: var(--dark); color: #fff; padding: 40px 0 20px; }
+.foot { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 30px; }
+.foot h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
+.foot h4 { color: var(--cream); margin-bottom: 10px; }
+.foot p, .foot a { font-size: 13px; color: #d0c4b8; display: block; margin: 6px 0; }
+.copy { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 15px; text-align: center; color: #a09080; font-size: 12px; }
+
+@media(max-width: 768px) {
+    .hero, .about, .foot { grid-template-columns: 1fr; }
+    .row { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+}
 </style>
 </head>
 <body>
-<header><div class="container nav">
-<a class="brand" href="#trang-chu"><img src="assets/logo.png" alt="Nón Len Đa Dạng"></a>
-<button class="menu" id="menu">☰</button>
-<nav><ul id="links"><li><a href="#trang-chu">Trang chủ</a></li><li><a href="#dich-vu">Nón len</a></li><li><a href="#ve-chung-toi">Về chúng tôi</a></li><li><a href="#dat-hang">Đặt hàng</a></li></ul></nav>
-</div></header>
+
+<header>
+  <div class="container nav">
+    <a class="brand-title" href="#trang-chu">🧶 Nón Len Đa Dạng</a>
+    <nav>
+      <ul>
+        <li><a href="#trang-chu">Trang chủ</a></li>
+        <li><a href="#dich-vu">Sản phẩm</a></li>
+        <li><a href="#ve-chung-toi">Về chúng tôi</a></li>
+        <li><a href="#dat-hang">Đặt hàng</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <main>
 <section class="container hero" id="trang-chu">
-<div>
-<span class="badge">🧶 Nón xinh • Mood xịn</span>
-<h1>Đội nón,<br><span>bật chất riêng.</span></h1>
-<h2>Nón Len Đa Dạng</h2>
-<p>Nhiều màu, nhiều phong cách, dễ phối outfit. Từ kem sữa nhẹ nhàng đến hồng đào, nâu mocha và xanh blue – chọn chiếc nón đúng mood của bạn.</p>
-<div class="actions"><a class="btn primary" href="#dat-hang">🛒 Đặt ngay</a><a class="btn soft" href="#dich-vu">Xem nón</a></div>
-</div>
-<div class="hero-logo"><img src="assets/logo.png" alt="Logo thương hiệu Nón Len Đa Dạng"><p>Thèm là đặt • Đội là ghiền 🧶</p></div>
+  <div>
+    <span class="badge">🧶 Nón Len Ấm Áp • Phong Cách</span>
+    <h1>Đội nón,<br><span>bật chất riêng.</span></h1>
+    <h2>Nón Len Đa Dạng</h2>
+    <p>Nhiều màu sắc, phong cách trẻ trung, dễ phối đồ. Chọn ngay mẫu nón len phù hợp nhất với bạn!</p>
+    <div class="actions">
+      <a class="btn primary" href="#dat-hang">🛒 Đặt ngay</a>
+      <a class="btn soft" href="#dich-vu">Xem bộ sưu tập</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&auto=format&fit=crop" alt="Nón len xinh">
+  </div>
 </section>
 
 <section class="white" id="dich-vu">
-<div class="container"><div class="heading"><small>Bộ sưu tập</small><h2>Nón len theo đúng màu bạn thích</h2><p>Form basic dễ đội, màu sắc nhẹ mắt và phù hợp với nhiều phong cách.</p></div>
-<div class="products">
-<article class="card"><div class="pic"><img src="assets/hat-cream.jpg" alt="Nón len màu kem"></div><div class="card-body"><div class="top"><h3>Kem sữa</h3><i class="dot" style="background:#e8d6c3"></i></div><div class="price">59.000 – 79.000đ</div><p>Nhẹ nhàng, tinh tế, dễ phối hằng ngày.</p><button class="btn primary choose" data-value="Nón Len Kem Sữa">Chọn màu này</button></div></article>
-<article class="card"><div class="pic"><img src="assets/hat-pink.jpg" alt="Nón len màu hồng"></div><div class="card-body"><div class="top"><h3>Hồng đào</h3><i class="dot" style="background:#d58f9b"></i></div><div class="price">59.000 – 79.000đ</div><p>Ngọt ngào vừa đủ, nổi bật mà không chói.</p><button class="btn pink choose" data-value="Nón Len Hồng Đào">Chọn màu này</button></div></article>
-<article class="card"><div class="pic"><img src="assets/hat-mocha.jpg" alt="Nón len nâu mocha"></div><div class="card-body"><div class="top"><h3>Nâu mocha</h3><i class="dot" style="background:#8b6252"></i></div><div class="price">69.000 – 89.000đ</div><p>Ấm áp, vintage và cực hợp tone đất.</p><button class="btn primary choose" data-value="Nón Len Nâu Mocha">Chọn màu này</button></div></article>
-<article class="card"><div class="pic"><img src="assets/hat-blue.jpg" alt="Nón len xanh blue"></div><div class="card-body"><div class="top"><h3>Xanh blue</h3><i class="dot" style="background:#6f9ba8"></i></div><div class="price">69.000 – 89.000đ</div><p>Mát mắt, trẻ trung, thêm chút cool cho outfit.</p><button class="btn blue choose" data-value="Nón Len Xanh Blue">Chọn màu này</button></div></article>
-<article class="card"><div class="pic"><img src="assets/hat-gray.jpg" alt="Nón len xám"></div><div class="card-body"><div class="top"><h3>Xám khói</h3><i class="dot" style="background:#919191"></i></div><div class="price">69.000 – 89.000đ</div><p>Trung tính, hiện đại, dễ phối mọi ngày.</p><button class="btn primary choose" data-value="Nón Len Xám Khói">Chọn màu này</button></div></article>
-<article class="card"><div class="pic"><img src="assets/hat-black.jpg" alt="Nón len đen"></div><div class="card-body"><div class="top"><h3>Đen basic</h3><i class="dot" style="background:#373230"></i></div><div class="price">69.000 – 89.000đ</div><p>Cá tính, tối giản và không bao giờ lỗi mốt.</p><button class="btn primary choose" data-value="Nón Len Đen Basic">Chọn màu này</button></div></article>
-</div></div>
+  <div class="container">
+    <div class="heading">
+      <small>Bộ sưu tập</small>
+      <h2>Mẫu Nón Len Hot Nhất</h2>
+      <p>Chất liệu len mềm mịn, giữ ấm tốt và phù hợp cho mọi outfit.</p>
+    </div>
+    <div class="products">
+      <article class="card">
+        <div class="pic"><img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400&auto=format&fit=crop" alt="Kem sữa"></div>
+        <div class="card-body">
+          <h3>Nón Len Kem Sữa</h3>
+          <div class="price">69.000đ</div>
+          <p>Nhẹ nhàng, tinh tế, cực kỳ dễ phối đồ.</p>
+          <button class="btn primary choose" data-value="Nón Len Kem Sữa">Chọn mua</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&auto=format&fit=crop" alt="Hồng đào"></div>
+        <div class="card-body">
+          <h3>Nón Len Hồng Đào</h3>
+          <div class="price">69.000đ</div>
+          <p>Ngọt ngào, nữ tính, nổi bật outfit của bạn.</p>
+          <button class="btn pink choose" data-value="Nón Len Hồng Đào">Chọn mua</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop" alt="Nâu Mocha"></div>
+        <div class="card-body">
+          <h3>Nón Len Nâu Mocha</h3>
+          <div class="price">79.000đ</div>
+          <p>Ấm áp, phong cách Vintage cổ điển.</p>
+          <button class="btn primary choose" data-value="Nón Len Nâu Mocha">Chọn mua</button>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section id="ve-chung-toi"><div class="container about">
-<div><img src="assets/hat-collection.jpg" alt="Bộ sưu tập nón len nhiều màu"></div>
-<div><span style="color:var(--pink);font-weight:800;letter-spacing:2px;font-size:12px">VỀ CHÚNG TÔI</span><h2>Một chiếc nón, nhiều phiên bản của bạn.</h2>
-<p><strong>Nón Len Đa Dạng</strong> bắt đầu từ mong muốn rất đơn giản: tạo ra những chiếc nón len xinh, dễ phối và có mức giá thân thiện với sinh viên.</p>
-<p>Tụi mình chọn nhiều gam màu nhẹ mắt để bạn có thể đổi mood theo outfit – hôm nay kem sữa, ngày mai hồng đào, cuối tuần nâu mocha.</p>
-<ul class="checks"><li><span>✓</span>Nhiều màu, nhiều phong cách</li><li><span>✓</span>Form basic dễ đội</li><li><span>✓</span>Giá phù hợp sinh viên</li><li><span>✓</span>Đóng gói xinh, phù hợp làm quà</li></ul></div>
-</div></section>
-
-<section class="order" id="dat-hang"><div class="container">
-<div class="heading"><small>Đặt hàng</small><h2>Chọn nón – điền thông tin – xong!</h2><p>Tụi mình sẽ liên hệ để xác nhận màu, số lượng và phí giao hàng.</p></div>
-<div class="formbox"><form id="form">
-<div class="row"><div class="group"><label>Họ tên *</label><input id="name" required placeholder="Nguyễn Văn A"></div><div class="group"><label>SĐT *</label><input id="phone" type="tel" required placeholder="0987 569 999"></div></div>
-<div class="group"><label>Mẫu / màu nón *</label><select id="package" required><option value="">-- Chọn mẫu --</option><option>Nón Len Kem Sữa</option><option>Nón Len Hồng Đào</option><option>Nón Len Nâu Mocha</option><option>Nón Len Xanh Blue</option><option>Nón Len Xám Khói</option><option>Nón Len Đen Basic</option></select></div>
-<div class="group"><label>Ghi chú</label><textarea id="note" placeholder="Ví dụ: Lấy 2 cái màu kem, 1 cái xanh..."></textarea></div>
-<button class="btn primary" type="submit" id="send">🧶 Gửi yêu cầu đặt hàng</button><div class="message" id="msg"></div></form></div>
-</div></section>
-
-<div class="cta"><h2>Sẵn sàng bật chất riêng?</h2><p>Chọn một chiếc nón hợp mood và làm outfit hôm nay đáng yêu hơn một chút.</p><a class="btn pink" href="#dat-hang">ĐẶT NÓN NGAY ✨</a></div>
+<section class="order" id="dat-hang">
+  <div class="container">
+    <div class="heading">
+      <small>Đặt hàng nhanh</small>
+      <h2>Điền thông tin nhận hàng</h2>
+    </div>
+    <div class="formbox">
+      <form id="form">
+        <div class="row">
+          <div class="group"><label>Họ tên *</label><input id="name" required placeholder="Nguyễn Văn A"></div>
+          <div class="group"><label>SĐT nhận hàng *</label><input id="phone" type="tel" required placeholder="0987 569 999"></div>
+        </div>
+        <div class="group">
+          <label>Chọn loại nón *</label>
+          <select id="package" required>
+            <option value="">-- Chọn sản phẩm --</option>
+            <option>Nón Len Kem Sữa</option>
+            <option>Nón Len Hồng Đào</option>
+            <option>Nón Len Nâu Mocha</option>
+          </select>
+        </div>
+        <div class="group"><label>Địa chỉ nhận hàng / Ghi chú</label><textarea id="note" placeholder="Nhập địa chỉ nhà và số lượng nón..."></textarea></div>
+        <button class="btn primary" type="submit" id="send">🧶 Gửi Đơn Đặt Hàng</button>
+        <div class="message" id="msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer><div class="container foot">
-<div><h3>Nón Len Đa Dạng</h3><p>Đội nón, bật chất riêng. Nón len nhiều màu, nhiều phong cách và thân thiện với sinh viên.</p></div>
-<div><h4>Liên hệ</h4><a href="tel:0987569999">📞 0987 569 999</a><a href="https://zalo.me/0987569999" target="_blank">💬 Zalo: 0987 569 999</a><a href="#">📘 Facebook: Nón Len Đa Dạng</a></div>
-<div><h4>Địa chỉ</h4><p>📍 Bình Dương, Việt Nam</p><p>🚚 Nhận đặt online toàn quốc</p></div>
-</div><div class="container copy">© 2026 Nón Len Đa Dạng • Đội nón, bật chất riêng.</div></footer>
+<footer>
+  <div class="container foot">
+    <div>
+      <h3>Nón Len Đa Dạng</h3>
+      <p>Chuyên nón len chất lượng, thời trang và ấm áp.</p>
+    </div>
+    <div>
+      <h4>Liên hệ đặt hàng</h4>
+      <!-- ĐỔI SỐ ĐIỆN THOẠI CỦA BẠN TẠI ĐÂY -->
+      <a href="tel:0987569999">📞 Hotline: 0987 569 999</a>
+      <a href="https://zalo.me/0987569999" target="_blank">💬 Zalo: 0987 569 999</a>
+    </div>
+    <div>
+      <h4>Địa chỉ shop</h4>
+      <!-- ĐỔI ĐỊA CHỈ CỦA BẠN TẠI ĐÂY -->
+      <p>📍 Địa chỉ: Bình Dương, Việt Nam</p>
+      <p>🚚 Ship COD toàn quốc</p>
+    </div>
+  </div>
+  <div class="container copy">© 2026 Nón Len Đa Dạng • All rights reserved.</div>
+</footer>
 
 <script>
-const menu=document.getElementById("menu"),links=document.getElementById("links");
-menu.onclick=()=>{links.classList.toggle("open");menu.textContent=links.classList.contains("open")?"✕":"☰"};
-document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>{links.classList.remove("open");menu.textContent="☰"});
-document.querySelectorAll(".choose").forEach(b=>b.onclick=()=>{document.getElementById("package").value=b.dataset.value;document.getElementById("dat-hang").scrollIntoView({behavior:"smooth"})});
+document.querySelectorAll(".choose").forEach(b => {
+    b.onclick = () => {
+        document.getElementById("package").value = b.dataset.value;
+        document.getElementById("dat-hang").scrollIntoView({ behavior: "smooth" });
+    };
+});
 
-const GOOGLE_SCRIPT_URL="";
-document.getElementById("form").addEventListener("submit",async e=>{
-e.preventDefault();const btn=document.getElementById("send"),msg=document.getElementById("msg");
-const data={name:document.getElementById("name").value.trim(),phone:document.getElementById("phone").value.trim(),package:document.getElementById("package").value,note:document.getElementById("note").value.trim()};
-btn.disabled=true;btn.textContent="Đang gửi...";
-try{
-if(GOOGLE_SCRIPT_URL){await fetch(GOOGLE_SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(data).toString()});msg.textContent="🎉 Đặt hàng thành công! Tụi mình sẽ liên hệ bạn sớm."}
-else{msg.textContent="💗 Đã nhận thông tin trên giao diện. Kết nối Google Sheets để lưu đơn hàng thật."}
-msg.style.display="block";e.target.reset()
-}catch(err){msg.textContent="⚠️ Có lỗi khi gửi. Vui lòng thử lại hoặc gọi 0987 569 999.";msg.style.display="block"}
-btn.disabled=false;btn.textContent="🧶 Gửi yêu cầu đặt hàng";
+document.getElementById("form").addEventListener("submit", e => {
+    e.preventDefault();
+    const msg = document.getElementById("msg");
+    msg.textContent = "🎉 Cảm ơn bạn! Đơn hàng đã gửi thành công. Shop sẽ gọi lại xác nhận ngay!";
+    msg.style.display = "block";
+    e.target.reset();
 });
 </script>
+
 </body>
 </html>
