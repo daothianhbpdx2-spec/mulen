@@ -52,8 +52,8 @@ h1 span { color: var(--pink); }
 .pink-btn { background: var(--pink); color: #fff; }
 .soft { background: var(--cream); color: var(--brown); }
 
-.hero-img-box { background: #fff; padding: 20px; border-radius: 28px; box-shadow: 0 15px 35px rgba(107,68,35,0.08); text-align: center; }
-.hero-img-box img { width: 100%; max-height: 380px; object-fit: contain; border-radius: 16px; }
+.hero-img-box { background: #fff; padding: 25px; border-radius: 28px; box-shadow: 0 15px 35px rgba(107,68,35,0.08); text-align: center; }
+.hero-img-box img { width: 100%; max-height: 350px; object-fit: contain; }
 
 /* SECTIONS */
 section { padding: 80px 0; }
@@ -106,7 +106,8 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 <header>
   <div class="container nav">
     <a class="brand" href="#trang-chu">
-      <img src="logo.png" alt="Nón Len Đa Dạng">
+      <!-- LOGO TRÊN HEADER -->
+      <img src="logo.png" alt="Nón Len Đa Dạng" onerror="this.src='https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=200'">
     </a>
     <nav>
       <ul>
@@ -119,7 +120,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 </header>
 
 <main>
-<!-- HERO -->
+<!-- HERO BANNER -->
 <section class="container hero" id="trang-chu">
   <div>
     <span class="badge">🧶 Nón Len Đa Dạng • Ấm Áp</span>
@@ -131,8 +132,8 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
     </div>
   </div>
   <div class="hero-img-box">
-    <!-- ĐÃ ĐỔI THÀNH HÌNH LOGO Ở ĐÂY -->
-    <img src="logo.png" alt="Nón Len Đa Dạng Logo">
+    <!-- HÌNH BANNER NƠI BỊ LỖI ĐÃ ĐƯỢC ĐỔI THÀNH LOGO -->
+    <img src="logo.png" alt="Nón Len Đa Dạng Logo" onerror="this.src='https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=500'">
   </div>
 </section>
 
@@ -148,7 +149,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
     <div class="products">
       <!-- 1. NÓN TRẮNG KEM -->
       <article class="card">
-        <div class="pic"><img src="non-trang.jpg" alt="Nón Len Trắng Kem"></div>
+        <div class="pic"><img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400&auto=format&fit=crop" alt="Nón Len Trắng Kem"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Trắng Kem</h3>
@@ -161,7 +162,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 
       <!-- 2. NÓN ĐEN AQER -->
       <article class="card">
-        <div class="pic"><img src="non-den.jpg" alt="Nón Len Đen AQER"></div>
+        <div class="pic"><img src="non-den.jpg" alt="Nón Len Đen AQER" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400'"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Đen AQER</h3>
@@ -174,7 +175,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 
       <!-- 3. NÓN HỒNG DÂU -->
       <article class="card">
-        <div class="pic"><img src="non-hong-dau.jpg" alt="Nón Len Hồng Dâu"></div>
+        <div class="pic"><img src="non-hong-dau.jpg" alt="Nón Len Hồng Dâu" onerror="this.src='https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400'"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Hồng Dâu</h3>
@@ -187,7 +188,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 
       <!-- 4. NÓN XÁM JEANS -->
       <article class="card">
-        <div class="pic"><img src="non-xam.jpg" alt="Nón Len Xám JEANS"></div>
+        <div class="pic"><img src="non-xam.jpg" alt="Nón Len Xám JEANS" onerror="this.src='https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400'"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Xám JEANS</h3>
@@ -200,7 +201,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 
       <!-- 5. NÓN LOANG NÂU KEM -->
       <article class="card">
-        <div class="pic"><img src="non-loang.jpg" alt="Nón Len Loang Nâu Kem"></div>
+        <div class="pic"><img src="non-loang.jpg" alt="Nón Len Loang Nâu Kem" onerror="this.src='https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400'"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Loang Nâu Kem</h3>
@@ -213,7 +214,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 
       <!-- 6. NÓN HỒNG ĐẤT -->
       <article class="card">
-        <div class="pic"><img src="non-hong.jpg" alt="Nón Len Hồng Đất"></div>
+        <div class="pic"><img src="non-hong.jpg" alt="Nón Len Hồng Đất" onerror="this.src='https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400'"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Hồng Đất</h3>
@@ -226,7 +227,7 @@ footer { background: var(--dark); color: #fff; padding: 50px 0 20px; }
 
       <!-- 7. NÓN ĐỎ RƯỢU VANG -->
       <article class="card">
-        <div class="pic"><img src="non-do.jpg" alt="Nón Len Đỏ Rượu Vang"></div>
+        <div class="pic"><img src="non-do.jpg" alt="Nón Len Đỏ Rượu Vang" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400'"></div>
         <div class="card-body">
           <div>
             <h3>Nón Len Đỏ Rượu Vang</h3>
